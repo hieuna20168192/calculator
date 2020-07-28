@@ -17,7 +17,7 @@ object Formatter {
         return formatter.format(d)
     }
 
-    private fun stringToDouble(str: String) = str.replace(",", "").toDouble()
+    fun stringToDouble(str: String) = str.replace(",", "").toDouble()
 
     fun formatString(str: String): String {
 

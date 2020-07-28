@@ -6,6 +6,8 @@ import android.os.Bundle
 import android.widget.Button
 import com.example.calculator.manager.CalcManager
 import com.example.calculator.manager.Calculate
+import com.example.calculator.util.EQUALS
+import com.example.calculator.util.PLUS
 import kotlinx.android.synthetic.main.activity_calculator.*
 
 class MainActivity : AppCompatActivity(), Calculate {
@@ -35,13 +37,22 @@ class MainActivity : AppCompatActivity(), Calculate {
                 calc.numPadEvent(lastKey)
             }
         }
+
+        btn_plus.setOnClickListener {
+            calc.handOperation(PLUS)
+        }
+
+        btn_equals.setOnClickListener {
+            calc.handOperation(EQUALS)
+        }
     }
 
     private fun getButtonIds() = arrayOf<Button>(btn_decimal, btn_0, btn_1, btn_2, btn_3, btn_4,
                                          btn_5, btn_6, btn_7, btn_8, btn_9)
 
     override fun setFormula(formula: String) {
-        println("Formula is $formula")
+        println("operation is $formula")
+        txt_formula.text = formula
     }
 
     override fun setValue(result: String) {
