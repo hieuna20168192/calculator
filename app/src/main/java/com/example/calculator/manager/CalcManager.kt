@@ -133,10 +133,11 @@ class CalcManager(private val calculate: Calculate, private val context: Context
     }
 
     fun handEqual(operation: String) {
+        
         lastOperation = operation
     }
 
-    private fun handResult(){
+    private fun handResult() {
 
         secondNumber = Formatter.stringToDouble(displayNumber!!)
         updateFormula()
@@ -144,8 +145,10 @@ class CalcManager(private val calculate: Calculate, private val context: Context
 
         if (result != null) {
             displayNumber = result.operation()
-            baseNumber = Formatter.stringToDouble(result.operation())
-            calculate.setValue(result.operation())
+            if (result.operation() != null) {
+                baseNumber = Formatter.stringToDouble(result.operation()!!)
+                calculate.setValue(result.operation()!!)
+            }
         } else {
             baseNumber = Formatter.stringToDouble(displayNumber!!)
         }

@@ -6,8 +6,7 @@ import android.os.Bundle
 import android.widget.Button
 import com.example.calculator.manager.CalcManager
 import com.example.calculator.manager.Calculate
-import com.example.calculator.util.EQUALS
-import com.example.calculator.util.PLUS
+import com.example.calculator.util.*
 import kotlinx.android.synthetic.main.activity_calculator.*
 
 class MainActivity : AppCompatActivity(), Calculate {
@@ -40,6 +39,18 @@ class MainActivity : AppCompatActivity(), Calculate {
 
         btn_plus.setOnClickListener {
             calc.handOperation(PLUS)
+        }
+
+        btn_minus.setOnClickListener {
+            calc.handOperation(MINUS)
+        }
+
+        btn_multiply.setOnClickListener {
+            calc.handOperation(MULTIPLY)
+        }
+
+        btn_divide.setOnClickListener {
+            calc.handOperation(DIVIDE)
         }
 
         btn_equals.setOnClickListener {
