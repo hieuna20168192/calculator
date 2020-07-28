@@ -128,13 +128,17 @@ class CalcManager(private val calculate: Calculate, private val context: Context
     }
 
     fun handOperation(operation: String) {
+        lastKey = ""
         handResult()
         lastOperation = operation
     }
 
     fun handEqual(operation: String) {
-        
-        lastOperation = operation
+        if (lastKey!!.isNotEmpty())
+        {
+            handOperation(operation)
+            firstOperation = true
+        }
     }
 
     private fun handResult() {

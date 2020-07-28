@@ -1,6 +1,5 @@
 package com.example.calculator
 
-import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -54,7 +53,7 @@ class MainActivity : AppCompatActivity(), Calculate {
         }
 
         btn_equals.setOnClickListener {
-            calc.handOperation(EQUALS)
+            calc.handEqual(EQUALS)
         }
     }
 
