@@ -134,19 +134,17 @@ class CalcManager(private val calculate: Calculate, private val context: Context
     }
 
     fun handEqual(operation: String) {
-        if (lastKey!!.isNotEmpty())
-        {
+        if (lastKey!!.isNotEmpty()) {
             handOperation(operation)
             firstOperation = true
         }
     }
 
-    fun handPercent(operation: String) {
-
-    }
-
     fun handRoot(operation: String) {
-
+        lastOperation = operation
+        baseNumber = Formatter.stringToDouble(displayNumber!!)
+        handResult()
+        lastOperation = ""
     }
 
     private fun handResult() {

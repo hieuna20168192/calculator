@@ -2,7 +2,6 @@ package com.example.calculator
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.DocumentsContract
 import android.widget.Button
 import com.example.calculator.manager.CalcManager
 import com.example.calculator.manager.Calculate
@@ -62,7 +61,7 @@ class MainActivity : AppCompatActivity(), Calculate {
         }
 
         btn_percent.setOnClickListener {
-            calc.handPercent(PERCENT)
+            calc.handOperation(PERCENT)
         }
 
         btn_root.setOnClickListener {
