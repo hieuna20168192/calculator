@@ -141,6 +141,14 @@ class CalcManager(private val calculate: Calculate, private val context: Context
         }
     }
 
+    fun handPercent(operation: String) {
+
+    }
+
+    fun handRoot(operation: String) {
+        
+    }
+
     private fun handResult() {
 
         secondNumber = Formatter.stringToDouble(displayNumber!!)
