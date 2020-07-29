@@ -12,3 +12,4 @@ class RootOperation(base: Double) : BaseOperation(base) {
     }
 
 }
+

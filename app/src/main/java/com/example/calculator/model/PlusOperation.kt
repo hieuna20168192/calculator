@@ -11,3 +11,4 @@ class PlusOperation(base: Double, second: Double) : BaseOperation(base, second) 
     }
 
 }
+

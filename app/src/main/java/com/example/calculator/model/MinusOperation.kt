@@ -11,3 +11,4 @@ class MinusOperation(base: Double, second: Double) : BaseOperation(base, second)
     }
 
 }
+

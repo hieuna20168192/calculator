@@ -164,5 +164,6 @@ class CalcManager(private val calculate: Calculate, private val context: Context
 
         firstOperation = false
     }
+
 }
 

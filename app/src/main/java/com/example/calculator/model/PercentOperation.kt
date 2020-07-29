@@ -11,3 +11,4 @@ class PercentOperation(base: Double, second: Double) : BaseOperation(base, secon
     }
 
 }
+

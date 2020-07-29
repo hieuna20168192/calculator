@@ -31,3 +31,4 @@ object Formatter {
 }
 
 fun Double.format(): String = Formatter.doubleToString(this)
+

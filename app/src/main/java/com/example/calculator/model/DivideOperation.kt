@@ -11,3 +11,4 @@ class DivideOperation(base: Double, second: Double) : BaseOperation(base, second
     }
 
 }
+

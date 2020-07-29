@@ -15,3 +15,4 @@ class PowerOperation(base: Double, second: Double) : BaseOperation(base, second)
     }
 
 }
+
