@@ -13,8 +13,8 @@ class CalcManager(private val calculate: Calculate, private val context: Context
     var lastKey: String? = null
     var lastOperation: String? = null
     var firstOperation: Boolean = false
-    private var baseNumber: Double = 0.0
-    private var secondNumber: Double = 0.0
+    var baseNumber: Double = 0.0
+    var secondNumber: Double = 0.0
 
 
     init {

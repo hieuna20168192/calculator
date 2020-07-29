@@ -3,6 +3,7 @@ package com.example.calculator
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.Toast
 import com.example.calculator.manager.CalcManager
 import com.example.calculator.manager.Calculate
 import com.example.calculator.util.*
@@ -79,6 +80,30 @@ class MainActivity : AppCompatActivity(), Calculate {
 
     override fun setValue(result: String) {
         txt_result.text = result
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putString("Value", calc.displayNumber)
+        outState.putString("Formula", calc.displayFormula)
+        outState.putString("UI Value", txt_result.text.toString())
+        outState.putString("UI Formula", txt_formula.text.toString())
+        outState.putString("Last Key", calc.lastKey)
+        outState.putString("Last Operation", calc.lastOperation)
+        outState.putDouble("Base Number", calc.baseNumber)
+        outState.putDouble("Second Number", calc.secondNumber)
+    }
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+        calc.displayNumber = savedInstanceState.getString("Value")
+        calc.displayFormula = savedInstanceState.getString("Formula")
+        calc.lastOperation = savedInstanceState.getString("Last Operation")
+        calc.lastKey = savedInstanceState.getString("Last Key")
+        calc.baseNumber = savedInstanceState.getDouble("Base Number")
+        calc.secondNumber = savedInstanceState.getDouble("Second Number")
+        txt_formula.text = savedInstanceState.getString("UI Formula")
+        txt_result.text = savedInstanceState.getString("UI Value")
     }
 
 }
