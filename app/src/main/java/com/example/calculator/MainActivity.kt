@@ -106,4 +106,3 @@ class MainActivity : AppCompatActivity(), Calculate {
         txt_result.text = savedInstanceState.getString("UI Value")
     }
 
-}

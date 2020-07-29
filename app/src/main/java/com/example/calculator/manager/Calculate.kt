@@ -4,3 +4,4 @@ interface Calculate {
     fun setFormula(formula: String)
     fun setValue(result: String)
 }
+

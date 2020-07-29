@@ -16,7 +16,6 @@ class CalcManager(private val calculate: Calculate, private val context: Context
     var baseNumber: Double = 0.0
     var secondNumber: Double = 0.0
 
-
     init {
         displayNumber = "0"
         displayFormula = ""
@@ -165,4 +164,6 @@ class CalcManager(private val calculate: Calculate, private val context: Context
 
         firstOperation = false
     }
+
 }
+

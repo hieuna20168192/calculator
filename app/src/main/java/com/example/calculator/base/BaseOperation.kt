@@ -8,3 +8,4 @@ abstract class BaseOperation(open val baseNum: Double, open val secondNum: Doubl
     abstract fun operation(): String?
 
 }
+

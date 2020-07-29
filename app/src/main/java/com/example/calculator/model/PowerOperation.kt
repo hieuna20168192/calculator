@@ -14,4 +14,3 @@ class PowerOperation(base: Double, second: Double) : BaseOperation(base, second)
         return Formatter.doubleToString(result)
     }
 
-}

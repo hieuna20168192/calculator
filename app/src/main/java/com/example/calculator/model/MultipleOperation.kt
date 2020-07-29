@@ -11,3 +11,4 @@ class MultipleOperation(base: Double, second: Double) : BaseOperation(base, seco
     }
 
 }
+

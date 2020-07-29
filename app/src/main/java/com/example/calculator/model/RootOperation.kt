@@ -11,4 +11,3 @@ class RootOperation(base: Double) : BaseOperation(base) {
         return Formatter.doubleToString(result)
     }
 
-}
